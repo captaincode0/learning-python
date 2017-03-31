@@ -99,6 +99,8 @@ print(hex_number)
 
 	The operators like and, or are used with the set defined by constructor mode,
 	and the other way operators like &, |
+
+	THE SETS DOESN'T SUPPORT INDEXING, BUT ARE ITERABLES
 '''
 
 #The way to declare one set is the following as constructor mode and with {}
