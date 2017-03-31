@@ -128,6 +128,7 @@ print("the result of [myset1 | myset2] is {0}".format(result))
 string = "This is one simple string"
 print(string)
 
+#byte string
 string = b"This is one unmutable string"
 print(string)
 
@@ -150,3 +151,73 @@ for char in string:
 #the byte array is the mutable version of byte string
 string = bytearray("¿Qué hace en España?", "latin1")
 print(string)
+
+#The strings implements two methods to handle the byte strings
+#decode: transforms one byte string to a normal string
+#encode: transform one normal string to one byte string
+
+mystring = b"This is one binary string"
+print(mystring)
+print(type(mystring)) #The function type get the datatype
+
+mystring_decoded = mystring.decode()
+print(mystring_decoded)
+print(type(mystring_decoded))
+
+'''
+	UTIL METHODS FOR STRINGS
+		len: get the longitude of one object
+		replace("string to replace", "string replaced"): replace one string by other.
+		find: search one string in other string and checks if exists.
+		strip: cuts all the spaces 
+		lstrip: cuts the white spaces located in the left side one string.
+		rstrip: cuts the white spaces located in the right side of one string.
+		upper: converts one string into uppercase words.
+		lower: converts one string into lowercase words.
+		split: splits or divide a string by one separator, that could be one character.
+		join: paste all characters of one string with one separator.
+'''
+this_string = "This is one simple string"
+print(this_string)
+
+#get the longitude
+print(len(this_string)) 
+
+#find the content in the string, and get the index
+searched_index = this_string.find("w") #get minus one when the content wasn't finded
+print(searched_index)
+
+#replace in the string
+replaced_string = this_string.replace("simple", "complex")
+print(replaced_string)	
+
+#delete the white spaces in one string
+string = " This is one string with    spaces    "
+print(string)
+
+#delete the white spaces in the left
+print(string.lstrip())
+
+#delete the white spaces in the right
+print(string.rstrip())
+
+#delete all the spaces
+print(string.strip())
+
+#convert all to lowercas
+print(string.lower())
+
+#convert all to uppercase
+print(string.upper())
+
+#source line get separate all the lines by one
+source_line = "int var1; int *p1;"
+lines = source_line.split(";");
+lines_splited = len(lines)-1
+
+for line_index in range(lines_splited):
+	print("{0}:{1}".format(line_index, lines[line_index].strip()))
+
+#join the string elements
+string2 = "abcdefg"
+print(string2.join(";"))
