@@ -15,8 +15,8 @@ print(mylist)
 #you can check if one element is in one list
 print(1000 in mylist)
 
-#the tuples are the mutable equivalence of one list
-#you can transform one list into one tuple defining creating one object of type tuple 
+#the tuples are the unmutable equivalence of one list
+#you can transform one list into one tuple defining creating one object of type tuple
 #with one list as argument
 
 mytuple = tuple(mylist)
